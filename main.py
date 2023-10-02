@@ -88,6 +88,7 @@ class Ui(QtWidgets.QMainWindow):
         for i in range(len(self.ans)):
             for j in self.ans[i]:
                 answers += str(str(i + 1) + ") " + str(j) + str("-->")
+            answers = answers[:len(answers) - 3]
             answers += "\n"
         self.textEdit.setText(answers)
 
