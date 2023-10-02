@@ -86,7 +86,9 @@ class Ui(QtWidgets.QMainWindow):
 
         answers = ""
         for i in range(len(self.ans)):
-            answers += str(str(i + 1) + ") " + str(self.ans[i][len(self.ans[i]) - 1]) + str("\n"))
+            for j in self.ans[i]:
+                answers += str(str(i + 1) + ") " + str(j) + str("-->")
+            answers += "\n"
         self.textEdit.setText(answers)
 
     def drawTree(self):
